@@ -1,0 +1,396 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home" activePage="home">
+
+  <!-- ────────────────────────────────────────────
+       HERO
+  ──────────────────────────────────────────── -->
+  <section class="hero section">
+    <div class="container">
+
+      <p class="hero__eyebrow fade-up delay-1">
+        <span class="hero__dot"></span> Przyjmuję nowych klientów
+      </p>
+
+      <h1 class="display hero__headline fade-up delay-2">
+        Cześć, jestem<br/>
+        <em class="hero__name">Yehor<br/>Kostyletskyi</em>
+      </h1>
+
+      <p class="hero__sub body-lg text-muted fade-up delay-3">
+        Buduję strony internetowe dla lokalnych firm — od podstaw, dopasowane do Twojej marki i klientów. Z pomocą AI, szybciej i lepiej niż większość agencji.
+      </p>
+
+      <div class="hero__actions fade-up delay-4">
+        <a href="mailto:ykwebbuilder@gmail.com" class="btn btn-primary">Napisz do mnie</a>
+        <a href="/projects" class="btn btn-outline">Zobacz usługi</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────
+       QUICK INTRO STRIP
+  ──────────────────────────────────────────── -->
+  <section class="intro section" style="background: var(--black); color: var(--white);">
+    <div class="container">
+      <div class="intro__grid">
+        <div class="intro__item">
+          <span class="intro__number">01</span>
+          <h3 class="heading-md">Co robię</h3>
+          <p class="body-md" style="color: var(--gray-300); margin-top: 0.75rem;">
+            Tworzę strony internetowe dla marek modowych, lokalnych sklepów i firm produktowych. Żadnych szablonów — każda strona powstaje od zera, pod Twoją markę i Twoich klientów.
+          </p>
+        </div>
+        <div class="intro__item">
+          <span class="intro__number">02</span>
+          <h3 class="heading-md">Moje podejście</h3>
+          <p class="body-md" style="color: var(--gray-300); margin-top: 0.75rem;">
+            Mam 16 lat i dorastałem na tym samym internecie, z którego korzystają Twoi klienci. Korzystam z AI w codziennej pracy — to znaczy szybciej, precyzyjniej i z większą dbałością o detal niż niejeden freelancer z wieloletnim stażem.
+          </p>
+        </div>
+        <div class="intro__item">
+          <span class="intro__number">03</span>
+          <h3 class="heading-md">Ceny</h3>
+          <p class="body-md" style="color: var(--gray-300); margin-top: 0.75rem;">
+            Strony od 1 200 zł. Jeden kontakt, szybka realizacja, zero ukrytych kosztów. Dostajesz gotową stronę — i jesteś jej jedynym właścicielem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────
+       FEATURED PROJECTS PREVIEW
+  ──────────────────────────────────────────── -->
+  <section class="featured section">
+    <div class="container">
+      <div class="featured__header">
+        <div class="divider"></div>
+        <h2 class="heading-xl">Co buduję</h2>
+        <a href="/projects" class="featured__see-all body-sm">
+          Wszystkie usługi →
+        </a>
+      </div>
+
+      <div class="featured__grid">
+        <a href="/projects" class="project-card">
+          <div class="project-card__number">01</div>
+          <div class="project-card__body">
+            <h3 class="heading-md">Moda & Odzież</h3>
+            <p class="body-md text-muted">
+              Strony dla butików, marek odzieżowych i firm ze świata mody. Czysty, estetyczny design, który pokazuje produkty i buduje rozpoznawalność marki.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Moda</span>
+              <span class="tag">E-commerce</span>
+              <span class="tag">Identyfikacja marki</span>
+            </div>
+          </div>
+          <span class="project-card__arrow">→</span>
+        </a>
+
+        <a href="/projects" class="project-card">
+          <div class="project-card__number">02</div>
+          <div class="project-card__body">
+            <h3 class="heading-md">Lokalne firmy & Sprzedaż</h3>
+            <p class="body-md text-muted">
+              Strony nastawione na sprzedaż dla lokalnych sklepów, usług i produktów. Zbudowane tak, żeby zamieniać odwiedzających w klientów.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Sprzedaż</span>
+              <span class="tag">Lokalne firmy</span>
+              <span class="tag">Landing page</span>
+            </div>
+          </div>
+          <span class="project-card__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────
+       CONTACT CTA
+  ──────────────────────────────────────────── -->
+  <section class="newsletter section" id="kontakt">
+    <div class="container">
+      <div class="newsletter__box">
+        <div class="newsletter__left">
+          <div class="divider"></div>
+          <h2 class="heading-xl">Zbudujmy<br/>Twoją stronę</h2>
+          <p class="body-lg text-muted" style="margin-top:1.25rem; max-width: 400px;">
+            Masz firmę i potrzebujesz strony? Napisz do mnie — opowiedz czym się zajmujesz, a wrócę z propozycją dopasowaną do Twojej branży.
+          </p>
+          <p class="body-sm text-muted" style="margin-top: 1rem;">
+            Strony od 1 200 zł · Realizacja w 2–3 tygodnie · Jeden kontakt
+          </p>
+        </div>
+        <div class="newsletter__right">
+          <div class="newsletter__embed-placeholder">
+            <p class="body-sm text-muted" style="text-align:center; margin-bottom: 1.5rem;">
+              Napisz czego potrzebujesz — odpowiem w ciągu 24 godzin.
+            </p>
+            <a href="mailto:ykwebbuilder@gmail.com" class="btn btn-primary" style="width:100%; text-align:center; display:block;">
+              ykwebbuilder@gmail.com →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ── Hero ── */
+  .hero {
+    padding-top: calc(var(--space-xl) + 2rem);
+    padding-bottom: var(--space-xl);
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+
+  .hero__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--persian-blue);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.85); }
+  }
+
+  .hero__headline {
+    margin-bottom: 2rem;
+  }
+
+  .hero__name {
+    font-style: normal;
+    color: var(--persian-blue);
+  }
+
+  .hero__sub {
+    max-width: 560px;
+    margin-bottom: 3rem;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ── Intro Strip ── */
+  .intro__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .intro__number {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--persian-blue);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  /* ── Featured Projects ── */
+  .featured__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .featured__see-all {
+    color: var(--gray-500);
+    transition: color var(--transition);
+    letter-spacing: 0.02em;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--gray-300);
+  }
+
+  .featured__see-all:hover {
+    color: var(--persian-blue);
+    border-color: var(--persian-blue);
+  }
+
+  .featured__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    border: 2px solid var(--black);
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    border-right: 2px solid var(--black);
+    position: relative;
+    transition: background var(--transition);
+    cursor: pointer;
+  }
+
+  .project-card:last-child {
+    border-right: none;
+  }
+
+  .project-card:hover {
+    background: var(--persian-blue);
+    color: var(--white);
+  }
+
+  .project-card:hover .text-muted {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .project-card:hover .tag {
+    border-color: rgba(255,255,255,0.4);
+    color: var(--white);
+  }
+
+  .project-card__number {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+    transition: color var(--transition);
+  }
+
+  .project-card:hover .project-card__number {
+    color: rgba(255,255,255,0.6);
+  }
+
+  .project-card__body {
+    flex: 1;
+  }
+
+  .project-card__body h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border: 1.5px solid var(--gray-300);
+    transition: all var(--transition);
+  }
+
+  .project-card__arrow {
+    font-size: 1.5rem;
+    margin-top: var(--space-md);
+    align-self: flex-end;
+    transition: transform var(--transition);
+  }
+
+  .project-card:hover .project-card__arrow {
+    transform: translate(4px, -4px);
+  }
+
+  /* ── Newsletter ── */
+  .newsletter__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    padding: var(--space-xl) 0;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+  }
+
+  .newsletter__embed-placeholder {
+    background: var(--gray-100);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .newsletter__mock-form {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  .newsletter__input {
+    flex: 1;
+    font-family: var(--font);
+    font-size: 0.95rem;
+    padding: 0.85rem 1.25rem;
+    border: 2px solid var(--black);
+    border-right: none;
+    background: var(--white);
+    outline: none;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .intro__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .featured__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-card {
+      border-right: none;
+      border-bottom: 2px solid var(--black);
+    }
+
+    .project-card:last-child {
+      border-bottom: none;
+    }
+
+    .newsletter__box {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      min-height: auto;
+      padding-top: calc(var(--space-lg) + 5rem);
+    }
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  activePage?: string;
+}
+
+const {
+  title,
+  description = 'Yehor Kostyletskyi — Strony internetowe dla lokalnych firm. Od 1 200 zł.',
+  activePage = '',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} — Yehor Kostyletskyi</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body>
+
+    <!-- ── Navigation ── -->
+    <header>
+      <nav class="nav">
+        <div class="container nav__inner">
+          <a href="/" class="nav__logo">YK<span>.</span></a>
+          <ul class="nav__links">
+            <li><a href="/" class={activePage === 'home' ? 'active' : ''}>Start</a></li>
+            <li><a href="/about" class={activePage === 'about' ? 'active' : ''}>Kim jestem</a></li>
+            <li><a href="/projects" class={activePage === 'projects' ? 'active' : ''}>Usługi</a></li>
+            <li><a href="mailto:ykwebbuilder@gmail.com" class="nav__cta">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── Page Content ── -->
+    <main class="page">
+      <slot />
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="footer__logo">YK<span>.</span></span>
+        <p class="footer__copy">© 2026 Yehor Kostyletskyi. Wszelkie prawa zastrzeżone.</p>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="https://linkedin.com/" target="_blank" class="body-sm text-muted" style="transition:color 0.2s" onmouseenter="this.style.color='var(--persian-blue)'" onmouseleave="this.style.color=''">LinkedIn</a>
+          <a href="mailto:ykwebbuilder@gmail.com" class="body-sm text-muted" style="transition:color 0.2s" onmouseenter="this.style.color='var(--persian-blue)'" onmouseleave="this.style.color=''">Email</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

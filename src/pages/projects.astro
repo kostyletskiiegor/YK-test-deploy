@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// ── Add your projects here ──────────────────────────────────────
+// When you're ready to fill in real content, just edit this array.
+const projects = [
+  {
+    number: "01",
+    title: "Strona dla marki modowej",
+    description: "Estetyczna, szybka strona dla butiku lub marki odzieżowej. Prezentuje kolekcje, buduje rozpoznawalność i prowadzi klientów do zakupu lub kontaktu.",
+    result: "Profesjonalny wizerunek online, który wyróżnia markę na tle konkurencji.",
+    tags: ["Moda", "E-commerce", "Identyfikacja marki"],
+    year: "2026",
+    link: "mailto:ykwebbuilder@gmail.com",
+  },
+  {
+    number: "02",
+    title: "Landing page produktowy",
+    description: "Dedykowana strona sprzedażowa dla jednego produktu lub oferty. Zaprojektowana tak, żeby maksymalnie zwiększyć konwersję — od pierwszego kliknięcia do zakupu.",
+    result: "Strona nastawiona na jeden cel: zamienić odwiedzającego w klienta.",
+    tags: ["Sprzedaż", "Landing page", "Konwersja"],
+    year: "2026",
+    link: "mailto:ykwebbuilder@gmail.com",
+  },
+  {
+    number: "03",
+    title: "Strona wizytówkowa dla lokalnej firmy",
+    description: "Prosta, przejrzysta strona dla lokalnego biznesu — usług, sklepu lub gabinetu. Zawiera ofertę, dane kontaktowe i mapę. Idealna do pozyskiwania klientów z Google.",
+    result: "Firma wygląda profesjonalnie i jest łatwa do znalezienia w sieci.",
+    tags: ["Lokalna firma", "Wizytówka", "SEO"],
+    year: "2026",
+    link: "mailto:ykwebbuilder@gmail.com",
+  },
+];
+---
+
+<Layout title="Usługi" activePage="projects" description="Strony internetowe dla lokalnych firm — moda, sprzedaż, wizytówki. Od 1 200 zł.">
+
+  <!-- ────────────────────────────────────────────
+       PAGE HERO
+  ──────────────────────────────────────────── -->
+  <section class="projects-hero section">
+    <div class="container">
+      <p class="projects-eyebrow fade-up delay-1">Co oferuję</p>
+      <h1 class="display fade-up delay-2">
+        Strony, które<br/><em class="text-blue">naprawdę działają.</em>
+      </h1>
+      <p class="body-lg text-muted fade-up delay-3" style="max-width: 540px; margin-top: 2rem;">
+        Każda strona tworzona jest od podstaw — dopasowana do Twojej branży, Twoich klientów i Twojego celu. Poniżej znajdziesz typy stron, które realizuję.
+      </p>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────
+       PROJECTS LIST
+  ──────────────────────────────────────────── -->
+  <section class="projects-list section" style="padding-top: 0;">
+    <div class="container">
+
+      <div class="projects__table-header">
+        <span class="body-sm text-muted">#</span>
+        <span class="body-sm text-muted">Usługa</span>
+        <span class="body-sm text-muted projects__col-year">Rok</span>
+        <span class="body-sm text-muted projects__col-link"></span>
+      </div>
+
+      {projects.map((project) => (
+        <a href={project.link} class="project-row" target={project.link !== "#" ? "_blank" : undefined}>
+
+          <div class="project-row__number body-sm">{project.number}</div>
+
+          <div class="project-row__main">
+            <h2 class="heading-md project-row__title">{project.title}</h2>
+            <p class="body-md text-muted project-row__desc">{project.description}</p>
+
+            <div class="project-row__result">
+              <span class="result-label">Efekt</span>
+              <span class="body-md">{project.result}</span>
+            </div>
+
+            <div class="project-row__tags">
+              {project.tags.map(tag => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="project-row__year body-sm text-muted projects__col-year">{project.year}</div>
+
+          <div class="project-row__arrow projects__col-link">→</div>
+
+        </a>
+      ))}
+
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────
+       NEWSLETTER CTA
+  ──────────────────────────────────────────── -->
+  <section class="projects-cta section" style="background: var(--black); color: var(--white);">
+    <div class="container">
+      <div class="projects-cta__inner">
+        <div>
+          <div class="divider"></div>
+          <h2 class="heading-xl">Gotowy na swoją stronę?</h2>
+          <p class="body-lg" style="color: var(--gray-300); margin-top: 1rem; max-width: 480px;">
+            Napisz mi czym się zajmujesz — odpiszę z propozycją i wyceną w ciągu 24 godzin.
+          </p>
+        </div>
+        <a href="mailto:ykwebbuilder@gmail.com" class="btn btn-primary" style="align-self: center; white-space: nowrap;">
+          Napisz do mnie →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .projects-hero {
+    padding-bottom: var(--space-md);
+  }
+
+  .projects-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--persian-blue);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Table header ── */
+  .projects__table-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 80px 40px;
+    gap: var(--space-md);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--black);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Project rows ── */
+  .project-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 80px 40px;
+    gap: var(--space-md);
+    align-items: start;
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--gray-300);
+    cursor: pointer;
+    transition: background var(--transition);
+    position: relative;
+  }
+
+  .project-row:hover {
+    background: var(--gray-100);
+    margin: 0 calc(-1 * var(--space-md));
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .project-row:hover .project-row__arrow {
+    transform: translate(4px, -4px);
+    color: var(--persian-blue);
+  }
+
+  .project-row:hover .project-row__title {
+    color: var(--persian-blue);
+  }
+
+  .project-row__number {
+    padding-top: 5px;
+    color: var(--gray-500);
+    letter-spacing: 0.06em;
+    font-weight: 700;
+  }
+
+  .project-row__title {
+    transition: color var(--transition);
+    margin-bottom: 0.75rem;
+  }
+
+  .project-row__desc {
+    margin-bottom: 1.25rem;
+  }
+
+  .project-row__result {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: var(--white);
+    border-left: 3px solid var(--persian-blue);
+  }
+
+  .result-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--persian-blue);
+    white-space: nowrap;
+  }
+
+  .project-row__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border: 1.5px solid var(--gray-300);
+    transition: all var(--transition);
+  }
+
+  .project-row:hover .tag {
+    border-color: var(--black);
+  }
+
+  .project-row__year {
+    padding-top: 5px;
+  }
+
+  .project-row__arrow {
+    font-size: 1.25rem;
+    padding-top: 4px;
+    transition: transform var(--transition), color var(--transition);
+  }
+
+  .projects__col-year,
+  .projects__col-link {
+    text-align: right;
+  }
+
+  /* ── Bottom CTA ── */
+  .projects-cta__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .projects__table-header,
+    .project-row {
+      grid-template-columns: 40px 1fr 40px;
+    }
+
+    .projects__col-year {
+      display: none;
+    }
+
+    .project-row:hover {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-row {
+      grid-template-columns: 1fr 40px;
+    }
+
+    .project-row__number,
+    .projects__table-header span:first-child {
+      display: none;
+    }
+  }
+</style>
